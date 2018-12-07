@@ -1,1 +1,1 @@
-# vonvogel-magento1.x
+# vonvogel-magento1.9.x
