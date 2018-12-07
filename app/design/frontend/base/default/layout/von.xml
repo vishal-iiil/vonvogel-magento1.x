@@ -51,14 +51,14 @@
         </reference>
         <reference name="head">
             <block type="core/text" name="von_js">
-                <action method="setText"><text><![CDATA[<script src="//www.vonvogel-design.com/js/von/von.js"></script>]]></text></action>
+                <action method="setText"><text><![CDATA[<script src="https://www.vonvogel-design.com/js/von/von.js"></script>]]></text></action>
             </block>
             <action method="addItem">
-               <type>skin_css</type><name>vonproducts/von.css</name>
-           </action>
-            <action method="addItem">
-                <type>skin_css</type><name>vonproducts/bootstrap.min.css</name>
+                <type>skin_css</type><name>vonproducts/css/von-custom-style.css</name>
             </action>
+            <!--<action method="addItem">
+                <type>skin_css</type><name>vonproducts/bootstrap.min.css</name>
+            </action>-->
         </reference>
         <reference name="content">
             <block type="vonproducts/index" name="vonproducts" template="von/vonproducts/index.phtml"/>

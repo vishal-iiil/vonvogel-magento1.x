@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Vonvogel_Vonproducts>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Vonvogel_Vonproducts>
     </modules>
     <global>
@@ -71,7 +71,7 @@
         <layout>
             <updates>
                 <vonproducts>
-                    <file>vonproducts_cart_item.xml</file>
+                    <file>von.xml</file>
                 </vonproducts>
             </updates>
         </layout>
@@ -106,8 +106,6 @@
         <vonvogel>
             <vonvogel_group>
                 <vonvogel_enable>1</vonvogel_enable>
-                <!--<Vonvogel_key>f00fe8b1527847447656</Vonvogel_key>
-                <Vonvogel_country>USA</Vonvogel_country>-->
             </vonvogel_group>
         </vonvogel>
     </default>

@@ -8,7 +8,8 @@ if (!$helper->isModuleEnabled()) {
     <?php
 } else {
     ?>
-    <div id="contentBox" style="width:1024px">
+
+    <div id="contentBox" style="width:1024px;">
         <h1>Design Your Own Watch</h1>
     </div>
     <input type="text" id="vonData" hidden>
@@ -19,7 +20,6 @@ if (!$helper->isModuleEnabled()) {
         <div class="overlay" id="overlay"></div>
         <div id="busy"></div>
     </div>
-
     <script>
         var contentBox = document.getElementById('contentBox');
         $.initVon({
@@ -50,3 +50,4 @@ if (!$helper->isModuleEnabled()) {
     <?php
 }
 ?>
+
