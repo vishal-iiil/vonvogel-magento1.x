@@ -2,5 +2,5 @@
 
 ##-- Version 1.0.0
 
--Uses online js version from von server
--Uses css and fonts from local setup
+- Uses online js version from von server
+- Uses css and fonts from local setup
