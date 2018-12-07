@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<config>
+    <tabs>
+        <vonvogel translate="label" module="vonproducts">
+            <label>VON VOGEL Extensions</label>
+            <sort_order>100</sort_order>
+        </vonvogel>
+    </tabs>
+
+    <sections>
+        <vonvogel translate="label" module="vonproducts">
+            <label>Panel Options</label>
+            <tab>vonvogel</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+
+            <groups>
+                <vonvogel_group translate="label" module="vonproducts">
+                    <label>Von Products Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <vonvogel_enable translate="label">
+                            <label>Enable Module: </label>
+                            <comment>Enable / Disable Module output</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </vonvogel_enable>
+
+                        <vonvogel_key translate="label">
+                            <label>API KEY:</label>
+                            <comment>KeyId to access Von Vogel API</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </vonvogel_key>
+
+                        <vonvogel_country translate="label">
+                            <label>Country: </label>
+                            <comment>Country to access Von Vogel API</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <!--<source_model>vonproducts/countries</source_model>-->
+                        </vonvogel_country>
+                    </fields>
+                </vonvogel_group>
+            </groups>
+        </vonvogel>
+    </sections>
+</config>

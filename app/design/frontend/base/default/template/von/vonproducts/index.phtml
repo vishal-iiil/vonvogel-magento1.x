@@ -1,0 +1,52 @@
+<?php
+$helper = Mage::helper('vonproducts');
+?>
+<?php
+if (!$helper->isModuleEnabled()) {
+    ?>
+    <h1>Oops! Your Module is not Enabled</h1>
+    <?php
+} else {
+    ?>
+    <div id="contentBox" style="width:1024px">
+        <h1>Design Your Own Watch</h1>
+    </div>
+    <input type="text" id="vonData" hidden>
+    <!--<input type="button" id="vontest" name="vontest" value="Von Test"/>-->
+
+
+    <div id="#busy-holder">
+        <div class="overlay" id="overlay"></div>
+        <div id="busy"></div>
+    </div>
+
+    <script>
+        var contentBox = document.getElementById('contentBox');
+        $.initVon({
+            country: '<?php echo $helper->getCountry();?>',
+            keyId: '<?php echo $helper->getKeyId(); ?>',
+            ele: 'contentBox'
+        })
+        $('#vonData').bind('click', function () {
+            var data = JSON.parse($(this).val());
+
+            jQuery('#overlay').show();
+            jQuery('#busy').show();
+            jQuery.ajax({
+                type: "POST",
+                url: "<?php echo Mage::getUrl('vonproducts/index/add'); ?>",
+                data: data,
+                dataType: "json",
+                complete: function (response) {
+                    jQuery('#overlay').hide();
+                    jQuery('#busy').hide();
+                    window.location.href = 'checkout/cart/';
+                    return false;
+                },
+            });
+
+        });
+    </script>
+    <?php
+}
+?>

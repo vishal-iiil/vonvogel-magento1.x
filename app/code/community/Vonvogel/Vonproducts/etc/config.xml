@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vonvogel_Vonproducts>
+            <version>1.0.0</version>
+        </Vonvogel_Vonproducts>
+    </modules>
+    <global>
+        <resources>
+            <vonproducts_setup>
+                <setup>
+                    <module>Vonvogel_Vonproducts</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </vonproducts_setup>
+            <vonproducts_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </vonproducts_write>
+            <vonproducts_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </vonproducts_read>
+        </resources>
+
+        <models>
+            <vonproducts>
+                <class>Vonvogel_Vonproducts_Model</class>
+            </vonproducts>
+        </models>
+
+        <helpers>
+            <vonproducts>
+                <class>Vonvogel_Vonproducts_Helper</class>
+            </vonproducts>
+        </helpers>
+
+        <blocks>
+            <vonproducts><class>Vonvogel_Vonproducts_Block</class></vonproducts>
+        </blocks>
+
+        <events>
+            <sales_quote_item_set_product>
+                <observers>
+                    <vonvogel_vonproducts>
+                        <type>singleton</type>
+                        <class>Vonvogel_Vonproducts_Model_Observer</class>
+                        <method>salesQuoteItemSetProduct</method>
+                    </vonvogel_vonproducts>
+                </observers>
+            </sales_quote_item_set_product>
+        </events>
+
+    </global>
+
+    <frontend>
+        <routers>
+            <vonproducts>
+                <use>standard</use>
+                <args>
+                    <module>Vonvogel_Vonproducts</module>
+                    <frontName>vonproducts</frontName>
+                </args>
+            </vonproducts>
+        </routers>
+
+        <layout>
+            <updates>
+                <vonproducts>
+                    <file>vonproducts_cart_item.xml</file>
+                </vonproducts>
+            </updates>
+        </layout>
+    </frontend>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <vonvogel>
+                                            <title>Von - All</title>
+                                        </vonvogel>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <default>
+        <vonvogel>
+            <vonvogel_group>
+                <vonvogel_enable>1</vonvogel_enable>
+                <!--<Vonvogel_key>f00fe8b1527847447656</Vonvogel_key>
+                <Vonvogel_country>USA</Vonvogel_country>-->
+            </vonvogel_group>
+        </vonvogel>
+    </default>
+</config>
